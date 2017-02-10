@@ -11,7 +11,7 @@
 
       <form ng-submit="movies.addMovie();">
         <p>Add a Movie</p>
-        <input type="text" ng-model="movies.newTitle" ng-focus="movies.onFocus();" ng-blur="movies.onBlur();" placeholder="Title">
+        <input type="text" ng-model="movies.newTitle" ng-change="movies.onChange();" placeholder="Title">
         <input type="text" ng-model="movies.newYear" placeholder="Release Year">
         <button type="submit">Add new Movie!</button>
       </form>
