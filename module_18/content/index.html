@@ -1,0 +1,29 @@
+
+<html ng-app="app">
+  <head>
+    <title>My Angular App</title>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+    <div ng-controller="MainController as main">
+
+      <a href="" ng-click="myKey = 'one'">Key one</a>
+      <a href="" ng-click="myKey = 'two'">Key two</a>
+
+      <p>{{ main.object[myKey] }}</p>
+      <p>Array: {{ main.array }}</p>
+      <p>Length: {{ main.array.length }}</p>
+      <p>Ternary: {{ main.array.length > 0 ? "It is" : "It isn't" }}</p>
+      <p>Some math (2+3*5): {{ 2+3*5 }}</p>
+      <p>Filters: {{ main.name | uppercase }}</p>
+      <p>Date: {{ main.date | date: 'longDate' }}</p>
+      <p>Date: {{ main.date | date: 'EEEE dd MMM, y HH:mm:ss' }}</p>
+
+    </div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/MainController.js"></script>
+  </body>
+</html>
