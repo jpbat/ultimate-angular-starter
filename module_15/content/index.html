@@ -1,0 +1,31 @@
+
+<html ng-app="app">
+  <head>
+    <title>My Angular App</title>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+    <div ng-controller="MoviesController as movies">
+
+      <form ng-submit="movies.addMovie();">
+        <p>Add a Movie</p>
+        <input type="text" ng-model="movies.newTitle" ng-focus="movies.onFocus();" ng-blur="movies.onBlur();" placeholder="Title">
+        <input type="text" ng-model="movies.newYear" placeholder="Release Year">
+        <button type="submit">Add new Movie!</button>
+      </form>
+
+      <h3>Movie List</h3>
+      <ul>
+        <li ng-repeat="movie in movies.favorites">
+          <p> {{ movie.title }}</p>
+          <p>Released in: {{ movie.year }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/MoviesController.js"></script>
+  </body>
+</html>
