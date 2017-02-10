@@ -42,9 +42,6 @@ function MoviesController() {
     this.onBlur = function() {
         console.log("Blur!");
     };
-    this.onChange = function() {
-        console.log("Change", this.newTitle);
-    };
 }
 
 angular
