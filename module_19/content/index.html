@@ -1,0 +1,19 @@
+
+<html ng-app="app">
+  <head>
+    <title>My Angular App</title>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+    <div ng-controller="MainController as main">
+
+      <p>Money: {{ main.money | currency:'€ ':0 }}</p>
+
+    </div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/MainController.js"></script>
+  </body>
+</html>
