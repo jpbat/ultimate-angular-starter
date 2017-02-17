@@ -1,0 +1,21 @@
+
+<html ng-app="app">
+  <head>
+    <title>My Angular App</title>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+    <div ng-controller="OrderController as order">
+      <h1>Order count: {{ order.orderQuantity }}</h1>
+      <counter name="{{order.orderName}}" count="order.orderQuantity "></counter>
+    </div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/CounterController.js"></script>
+    <script type="text/javascript" src="js/counter.directive.js"></script>
+    <script type="text/javascript" src="js/OrderController.js"></script>
+  </body>
+</html>
+
