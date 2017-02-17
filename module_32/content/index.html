@@ -1,0 +1,25 @@
+
+<html ng-app="app">
+  <head>
+    <title>My Angular App</title>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.js"></script>
+  </head>
+  <body>
+
+    <h1>My Angular app!</h1>
+    <nav>
+      <ul>
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+      </ul>
+    </nav>
+    <ui-view></ui-view>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/HomeController.js"></script>
+    <script type="text/javascript" src="js/AboutController.js"></script>
+  </body>
+</html>
+
